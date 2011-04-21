@@ -1,0 +1,41 @@
+<div><%= link_to "Back to Posts", :controller => 'posts', :action => 'index' %></div>
+
+<h1>Responses to Post</h1> 
+
+<% @responses.each do |post| %>
+	<% cheer = Cheer.find_by_user_id_and_post_id(@user_id_in_session, post.id)  %>
+	<div class="post">
+		<div class="post_title"><%=h post.title %></div>
+		<!-- Add Cheer button for other users' posts -->		
+		<%= h get_num_cheers(post.id) %> Cheer<%= get_num_cheers(post.id) == 1 ? "" : "s"  %><%= get_num_cheers(post.id) > 0 ? "!" : " :("%>
+		<% if(post.user_id != @user_id_in_session) %>
+			<% if cheer  %>			
+			<%= add_uncheer_button(post.id, @user_id_in_session) %>		
+			<% elsif !cheer %>		
+			<%= add_cheer_button(post.id, @user_id_in_session)  %>
+			<!-- check already cheered by current use -->					
+			<!--<%= button_to 'Cheer!', {:controller => "posts", :action => "add_cheer", :post_id => post.id} %>-->
+			<% else %>
+			<br />
+			<% end %>
+		<% end %>
+		
+		<div class="post_user"><%= h("Posted by #{User.find(post.user_id).login}") %> </div>
+		<div class="post_body"><%= h post.body %></div>				
+		<% if(post.user_id == @user_id_in_session) %>
+			<br />
+			<div class="post_response_link"><%= link_to 'Edit Post', edit_post_path(post) %></div>
+		<% end %>
+		
+		--------------------------------------------------
+	</div>
+  <!--<tr>
+    <td><%=h post.title %></td>
+    <td><%=h post.body %></td>
+    <td><%=h post.user_id %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>-->
+<% end %>
+<div><%= link_to "Back to Posts", :controller => 'posts', :action => 'index' %></div>

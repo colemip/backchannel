@@ -1,0 +1,1890 @@
+# Logfile created on Tue Nov 02 18:16:08 -0400 2010
+
+Processing LoginController#index (for 127.0.0.1 at 2010-11-02 18:18:23) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 104ms (View: 101, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#logout (for 127.0.0.1 at 2010-11-02 18:18:27) [POST]
+  Parameters: {"authenticity_token"=>"KXTnbEhYelcb253D+veiWlYzx84Ff5S3tM5K1QYWlxg="}
+Redirected to http://localhost:3000/login/login
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/application/logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2010-11-02 18:18:27) [GET]
+Rendering template within layouts/application
+Rendering login/login
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2010-11-02 18:18:34) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"KXTnbEhYelcb253D+veiWlYzx84Ff5S3tM5K1QYWlxg=", "pw"=>"theforce", "login"=>"lskywalker"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'lskywalker') LIMIT 1[0m
+Redirected to http://localhost:3000/posts
+Completed in 186ms (DB: 0) | 302 Found [http://localhost/login/login]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 18:18:34) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 157ms (View: 107, DB: 8) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-11-02 18:18:40) [GET]
+  Parameters: {"id"=>"view_responses"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=view_responses):
+  app/controllers/posts_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.7ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-11-02 18:18:44) [GET]
+  Parameters: {"method"=>"get", "id"=>"add_response", "response_id"=>"2"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=add_response):
+  app/controllers/posts_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (99.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#add_cheer (for 127.0.0.1 at 2010-11-02 18:18:57) [POST]
+  Parameters: {"post_id"=>"3", "authenticity_token"=>"KXTnbEhYelcb253D+veiWlYzx84Ff5S3tM5K1QYWlxg=", "user_id"=>"15"}
+  [4;36;1mCheer Create (2.0ms)[0m   [0;1mINSERT INTO "cheers" ("created_at", "updated_at", "post_id", "user_id") VALUES('2010-11-02 22:18:57', '2010-11-02 22:18:57', 3, 15)[0m
+Redirected to http://localhost:3000/posts
+Completed in 84ms (DB: 2) | 302 Found [http://localhost/posts/add_cheer?post_id=3&user_id=15]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 18:18:57) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 81ms (View: 66, DB: 5) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#delete_cheer (for 127.0.0.1 at 2010-11-02 18:19:00) [POST]
+  Parameters: {"post_id"=>"3", "authenticity_token"=>"KXTnbEhYelcb253D+veiWlYzx84Ff5S3tM5K1QYWlxg=", "user_id"=>"15"}
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = '3') LIMIT 1[0m
+  [4;35;1mCheer Destroy (1.0ms)[0m   [0mDELETE FROM "cheers" WHERE "id" = 65[0m
+Redirected to http://localhost:3000/posts
+Completed in 635ms (DB: 1) | 302 Found [http://localhost/posts/delete_cheer?post_id=3&user_id=15]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 18:19:01) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 173ms (View: 151, DB: 9) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 18:23:31) [GET]
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 83ms (View: 66, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing ApplicationController#logout (for 127.0.0.1 at 2010-11-02 18:23:38) [POST]
+  Parameters: {"authenticity_token"=>"KXTnbEhYelcb253D+veiWlYzx84Ff5S3tM5K1QYWlxg="}
+Redirected to http://localhost:3000/login/login
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/application/logout]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2010-11-02 18:23:38) [GET]
+Rendering template within layouts/application
+Rendering login/login
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/login/login]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2010-11-02 18:24:35) [POST]
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"KXTnbEhYelcb253D+veiWlYzx84Ff5S3tM5K1QYWlxg=", "pw"=>"theforce", "login"=>"lskywalker"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."login" = 'lskywalker') LIMIT 1[0m
+Redirected to http://localhost:3000/login/admin_index
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/login/login]
+
+
+Processing LoginController#admin_index (for 127.0.0.1 at 2010-11-02 18:24:35) [GET]
+Rendering template within layouts/application
+Rendering login/admin_index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/login/admin_index]
+
+
+Processing LoginController#admin_index (for 127.0.0.1 at 2010-11-02 18:26:24) [GET]
+Rendering template within layouts/application
+Rendering login/admin_index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/login/admin_index]
+
+
+Processing LoginController#admin_index (for 127.0.0.1 at 2010-11-02 18:27:07) [GET]
+Rendering template within layouts/application
+Rendering login/admin_index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/login/admin_index]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 18:45:03) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 86ms (View: 70, DB: 2) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-11-02 18:45:08) [GET]
+  Parameters: {"method"=>"get", "id"=>"add_response", "response_id"=>"2"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=add_response):
+  app/controllers/posts_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (67.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 19:17:54) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+ERROR: compiling _run_erb_app47views47posts47index46html46erb RAISED compile error
+C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:30: syntax error, unexpected ')'
+...action => "add_response",    ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47posts47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--function hideDiv(div_id)\n{\n\tdocument.getElementById(div_id).style.visibility = 'hidden';\n}-->\n\n<h1>Posts</h1>\n\n"
+
+
+
+
+
+
+;  @posts.each do |post| ; @output_buffer.concat "\n\t"
+;  cheer = Cheer.find_by_user_id_and_post_id(@user_id_in_session, post.id)  ; @output_buffer.concat "\n\t<div class=\"post\">\n\t\t<div class=\"post_title\">"
+
+; @output_buffer.concat((h post.title ).to_s); @output_buffer.concat "</div>\n\t\t<!-- Add Cheer button for other users' posts -->\t\t\n\t\t"
+
+; @output_buffer.concat(( h get_num_cheers(post.id) ).to_s); @output_buffer.concat " Cheer"; @output_buffer.concat(( get_num_cheers(post.id) == 1 ? "" : "s"  ).to_s); @output_buffer.concat(( get_num_cheers(post.id) > 0 ? "!" : " :(").to_s); @output_buffer.concat "\n\t\t"
+;  if(post.user_id != @user_id_in_session) ; @output_buffer.concat "\n\t\t\t"
+;  if cheer  ; @output_buffer.concat "\t\t\t\n\t\t\t"
+; @output_buffer.concat(( add_uncheer_button(post.id, @user_id_in_session) ).to_s); @output_buffer.concat "\t\t\n\t\t\t"
+;  elsif !cheer ; @output_buffer.concat "\t\t\n\t\t\t"
+; @output_buffer.concat(( add_cheer_button(post.id, @user_id_in_session)  ).to_s); @output_buffer.concat "\n\t\t\t<!-- check already cheered by current use -->\t\t\t\t\t\n\t\t\t<!--"
+
+; @output_buffer.concat(( button_to 'Cheer!', {:controller => "posts", :action => "add_cheer", :post_id => post.id} ).to_s); @output_buffer.concat "-->\n\t\t\t"
+;  else ; @output_buffer.concat "\n\t\t\t<br />\n\t\t\t"
+
+;  end ; @output_buffer.concat "\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t\n\t\t<div class=\"post_user\">"
+
+; @output_buffer.concat(( h("Posted by #{User.find(post.user_id).login}") ).to_s); @output_buffer.concat " </div>\n\t\t<div class=\"post_body\">"
+; @output_buffer.concat(( h post.body ).to_s); @output_buffer.concat "</div>\t\t\n\t\t"
+;  if(post.user_id != @user_id_in_session) ; @output_buffer.concat "\t\n\t\t\t<br />\t\t\t\n\t\t\t<div class=\"post_response_link\">"
+
+; @output_buffer.concat(( link_to "Add Response", :controller => "posts",  :action => "add_response",    ).to_s); @output_buffer.concat " </div>\n\t\t\t<!--<div class=\"post_response_link\">"
+; @output_buffer.concat(( add_response_link(post.user_id, @user_id_in_session) ).to_s); @output_buffer.concat "</div>-->\t\t\t\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t"
+;  if(post.user_id == @user_id_in_session) ; @output_buffer.concat "\n\t\t\t<br />\n\t\t\t<div class=\"post_response_link\">"
+
+; @output_buffer.concat(( link_to 'Edit Post', edit_post_path(post) ).to_s); @output_buffer.concat "</div>\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t<div class=\"post_response_link\">"
+; @output_buffer.concat(( link_to 'View Responses', {:controller => "posts", :action => "view_responses"} ).to_s); @output_buffer.concat "</div>\n\t\t\n\t\t<!--<a href=\"javascript:hideDiv('div_responses')\" >Show Responses</a>\n\t\t<div id=\"div_responses\">\n\t\t\t"
+
+
+
+;  @responses = Post.find(:all, :conditions => ["response_id = #{post.id}"]).each do |response|  ; @output_buffer.concat "\n\t\t\t\tResponses: "
+; @output_buffer.concat(( h response.title ).to_s); @output_buffer.concat "\t\n\t\t\t"
+;  end ; @output_buffer.concat "\n\t\t</div>-->\n\t\t\n\t\t--------------------------------------------------\n\t</div>\n  <!--<tr>\n    <td>"
+
+
+
+
+
+; @output_buffer.concat((h post.title ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h post.body ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h post.user_id ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Show', post ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_post_path(post) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>-->\n"
+
+;  end ; @output_buffer.concat "\n\n\n<br />\n\n<div class=\"post_new_post\">"
+
+
+
+
+; @output_buffer.concat(( link_to 'New post', new_post_path ).to_s); @output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:64:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/Ian/workspace/backchannel_postreview/app/controllers/posts_controller.rb:31:in `index'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:30: syntax error, unexpected ')'
+...action => "add_response",    ).to_s); @output_buffer.concat ...
+                              ^) on line #30 of app/views/posts/index.html.erb:
+27: 		<div class="post_body"><%= h post.body %></div>		
+28: 		<% if(post.user_id != @user_id_in_session) %>	
+29: 			<br />			
+30: 			<div class="post_response_link"><%= link_to "Add Response", :controller => "posts",  :action => "add_response",    %> </div>
+31: 			<!--<div class="post_response_link"><%= add_response_link(post.user_id, @user_id_in_session) %></div>-->			
+32: 		<% end %>
+33: 		<% if(post.user_id == @user_id_in_session) %>
+
+    app/views/posts/index.html.erb:64:in `compile!'
+    app/controllers/posts_controller.rb:31:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 20:03:44) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 152ms (View: 129, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 20:04:23) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+ERROR: compiling _run_erb_app47views47posts47index46html46erb RAISED compile error
+C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:30: syntax error, unexpected ')', expecting tASSOC
+...on => "add_response", post   ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47posts47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--function hideDiv(div_id)\n{\n\tdocument.getElementById(div_id).style.visibility = 'hidden';\n}-->\n\n<h1>Posts</h1>\n\n"
+
+
+
+
+
+
+;  @posts.each do |post| ; @output_buffer.concat "\n\t"
+;  cheer = Cheer.find_by_user_id_and_post_id(@user_id_in_session, post.id)  ; @output_buffer.concat "\n\t<div class=\"post\">\n\t\t<div class=\"post_title\">"
+
+; @output_buffer.concat((h post.title ).to_s); @output_buffer.concat "</div>\n\t\t<!-- Add Cheer button for other users' posts -->\t\t\n\t\t"
+
+; @output_buffer.concat(( h get_num_cheers(post.id) ).to_s); @output_buffer.concat " Cheer"; @output_buffer.concat(( get_num_cheers(post.id) == 1 ? "" : "s"  ).to_s); @output_buffer.concat(( get_num_cheers(post.id) > 0 ? "!" : " :(").to_s); @output_buffer.concat "\n\t\t"
+;  if(post.user_id != @user_id_in_session) ; @output_buffer.concat "\n\t\t\t"
+;  if cheer  ; @output_buffer.concat "\t\t\t\n\t\t\t"
+; @output_buffer.concat(( add_uncheer_button(post.id, @user_id_in_session) ).to_s); @output_buffer.concat "\t\t\n\t\t\t"
+;  elsif !cheer ; @output_buffer.concat "\t\t\n\t\t\t"
+; @output_buffer.concat(( add_cheer_button(post.id, @user_id_in_session)  ).to_s); @output_buffer.concat "\n\t\t\t<!-- check already cheered by current use -->\t\t\t\t\t\n\t\t\t<!--"
+
+; @output_buffer.concat(( button_to 'Cheer!', {:controller => "posts", :action => "add_cheer", :post_id => post.id} ).to_s); @output_buffer.concat "-->\n\t\t\t"
+;  else ; @output_buffer.concat "\n\t\t\t<br />\n\t\t\t"
+
+;  end ; @output_buffer.concat "\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t\n\t\t<div class=\"post_user\">"
+
+; @output_buffer.concat(( h("Posted by #{User.find(post.user_id).login}") ).to_s); @output_buffer.concat " </div>\n\t\t<div class=\"post_body\">"
+; @output_buffer.concat(( h post.body ).to_s); @output_buffer.concat "</div>\t\t\n\t\t"
+;  if(post.user_id != @user_id_in_session) ; @output_buffer.concat "\t\n\t\t\t<br />\t\t\t\n\t\t\t<div class=\"post_response_link\">"
+
+; @output_buffer.concat(( link_to "Add Response", :action => "add_response", post   ).to_s); @output_buffer.concat " </div>\n\t\t\t<!--<div class=\"post_response_link\">"
+; @output_buffer.concat(( add_response_link(post.user_id, @user_id_in_session) ).to_s); @output_buffer.concat "</div>-->\t\t\t\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t"
+;  if(post.user_id == @user_id_in_session) ; @output_buffer.concat "\n\t\t\t<br />\n\t\t\t<div class=\"post_response_link\">"
+
+; @output_buffer.concat(( link_to 'Edit Post', edit_post_path(post) ).to_s); @output_buffer.concat "</div>\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t<div class=\"post_response_link\">"
+; @output_buffer.concat(( link_to 'View Responses', {:controller => "posts", :action => "view_responses"} ).to_s); @output_buffer.concat "</div>\n\t\t\n\t\t<!--<a href=\"javascript:hideDiv('div_responses')\" >Show Responses</a>\n\t\t<div id=\"div_responses\">\n\t\t\t"
+
+
+
+;  @responses = Post.find(:all, :conditions => ["response_id = #{post.id}"]).each do |response|  ; @output_buffer.concat "\n\t\t\t\tResponses: "
+; @output_buffer.concat(( h response.title ).to_s); @output_buffer.concat "\t\n\t\t\t"
+;  end ; @output_buffer.concat "\n\t\t</div>-->\n\t\t\n\t\t--------------------------------------------------\n\t</div>\n  <!--<tr>\n    <td>"
+
+
+
+
+
+; @output_buffer.concat((h post.title ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h post.body ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h post.user_id ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Show', post ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_post_path(post) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>-->\n"
+
+;  end ; @output_buffer.concat "\n\n\n<br />\n\n<div class=\"post_new_post\">"
+
+
+
+
+; @output_buffer.concat(( link_to 'New post', new_post_path ).to_s); @output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:64:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/Ian/workspace/backchannel_postreview/app/controllers/posts_controller.rb:31:in `index'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:30: syntax error, unexpected ')', expecting tASSOC
+...on => "add_response", post   ).to_s); @output_buffer.concat ...
+                              ^) on line #30 of app/views/posts/index.html.erb:
+27: 		<div class="post_body"><%= h post.body %></div>		
+28: 		<% if(post.user_id != @user_id_in_session) %>	
+29: 			<br />			
+30: 			<div class="post_response_link"><%= link_to "Add Response", :action => "add_response", post   %> </div>
+31: 			<!--<div class="post_response_link"><%= add_response_link(post.user_id, @user_id_in_session) %></div>-->			
+32: 		<% end %>
+33: 		<% if(post.user_id == @user_id_in_session) %>
+
+    app/views/posts/index.html.erb:64:in `compile!'
+    app/controllers/posts_controller.rb:31:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.9ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 20:04:44) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+ERROR: compiling _run_erb_app47views47posts47index46html46erb RAISED compile error
+C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:30: syntax error, unexpected ')', expecting tASSOC
+...=> "add_response", post.id   ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47posts47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--function hideDiv(div_id)\n{\n\tdocument.getElementById(div_id).style.visibility = 'hidden';\n}-->\n\n<h1>Posts</h1>\n\n"
+
+
+
+
+
+
+;  @posts.each do |post| ; @output_buffer.concat "\n\t"
+;  cheer = Cheer.find_by_user_id_and_post_id(@user_id_in_session, post.id)  ; @output_buffer.concat "\n\t<div class=\"post\">\n\t\t<div class=\"post_title\">"
+
+; @output_buffer.concat((h post.title ).to_s); @output_buffer.concat "</div>\n\t\t<!-- Add Cheer button for other users' posts -->\t\t\n\t\t"
+
+; @output_buffer.concat(( h get_num_cheers(post.id) ).to_s); @output_buffer.concat " Cheer"; @output_buffer.concat(( get_num_cheers(post.id) == 1 ? "" : "s"  ).to_s); @output_buffer.concat(( get_num_cheers(post.id) > 0 ? "!" : " :(").to_s); @output_buffer.concat "\n\t\t"
+;  if(post.user_id != @user_id_in_session) ; @output_buffer.concat "\n\t\t\t"
+;  if cheer  ; @output_buffer.concat "\t\t\t\n\t\t\t"
+; @output_buffer.concat(( add_uncheer_button(post.id, @user_id_in_session) ).to_s); @output_buffer.concat "\t\t\n\t\t\t"
+;  elsif !cheer ; @output_buffer.concat "\t\t\n\t\t\t"
+; @output_buffer.concat(( add_cheer_button(post.id, @user_id_in_session)  ).to_s); @output_buffer.concat "\n\t\t\t<!-- check already cheered by current use -->\t\t\t\t\t\n\t\t\t<!--"
+
+; @output_buffer.concat(( button_to 'Cheer!', {:controller => "posts", :action => "add_cheer", :post_id => post.id} ).to_s); @output_buffer.concat "-->\n\t\t\t"
+;  else ; @output_buffer.concat "\n\t\t\t<br />\n\t\t\t"
+
+;  end ; @output_buffer.concat "\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t\n\t\t<div class=\"post_user\">"
+
+; @output_buffer.concat(( h("Posted by #{User.find(post.user_id).login}") ).to_s); @output_buffer.concat " </div>\n\t\t<div class=\"post_body\">"
+; @output_buffer.concat(( h post.body ).to_s); @output_buffer.concat "</div>\t\t\n\t\t"
+;  if(post.user_id != @user_id_in_session) ; @output_buffer.concat "\t\n\t\t\t<br />\t\t\t\n\t\t\t<div class=\"post_response_link\">"
+
+; @output_buffer.concat(( link_to "Add Response", :action => "add_response", post.id   ).to_s); @output_buffer.concat " </div>\n\t\t\t<!--<div class=\"post_response_link\">"
+; @output_buffer.concat(( add_response_link(post.user_id, @user_id_in_session) ).to_s); @output_buffer.concat "</div>-->\t\t\t\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t"
+;  if(post.user_id == @user_id_in_session) ; @output_buffer.concat "\n\t\t\t<br />\n\t\t\t<div class=\"post_response_link\">"
+
+; @output_buffer.concat(( link_to 'Edit Post', edit_post_path(post) ).to_s); @output_buffer.concat "</div>\n\t\t"
+;  end ; @output_buffer.concat "\n\t\t<div class=\"post_response_link\">"
+; @output_buffer.concat(( link_to 'View Responses', {:controller => "posts", :action => "view_responses"} ).to_s); @output_buffer.concat "</div>\n\t\t\n\t\t<!--<a href=\"javascript:hideDiv('div_responses')\" >Show Responses</a>\n\t\t<div id=\"div_responses\">\n\t\t\t"
+
+
+
+;  @responses = Post.find(:all, :conditions => ["response_id = #{post.id}"]).each do |response|  ; @output_buffer.concat "\n\t\t\t\tResponses: "
+; @output_buffer.concat(( h response.title ).to_s); @output_buffer.concat "\t\n\t\t\t"
+;  end ; @output_buffer.concat "\n\t\t</div>-->\n\t\t\n\t\t--------------------------------------------------\n\t</div>\n  <!--<tr>\n    <td>"
+
+
+
+
+
+; @output_buffer.concat((h post.title ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h post.body ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat((h post.user_id ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Show', post ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Edit', edit_post_path(post) ).to_s); @output_buffer.concat "</td>\n    <td>"
+; @output_buffer.concat(( link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete ).to_s); @output_buffer.concat "</td>\n  </tr>-->\n"
+
+;  end ; @output_buffer.concat "\n\n\n<br />\n\n<div class=\"post_new_post\">"
+
+
+
+
+; @output_buffer.concat(( link_to 'New post', new_post_path ).to_s); @output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:64:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/Ian/workspace/backchannel_postreview/app/controllers/posts_controller.rb:31:in `index'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/Ian/workspace/backchannel_postreview/app/views/posts/index.html.erb:30: syntax error, unexpected ')', expecting tASSOC
+...=> "add_response", post.id   ).to_s); @output_buffer.concat ...
+                              ^) on line #30 of app/views/posts/index.html.erb:
+27: 		<div class="post_body"><%= h post.body %></div>		
+28: 		<% if(post.user_id != @user_id_in_session) %>	
+29: 			<br />			
+30: 			<div class="post_response_link"><%= link_to "Add Response", :action => "add_response", post.id   %> </div>
+31: 			<!--<div class="post_response_link"><%= add_response_link(post.user_id, @user_id_in_session) %></div>-->			
+32: 		<% end %>
+33: 		<% if(post.user_id == @user_id_in_session) %>
+
+    app/views/posts/index.html.erb:64:in `compile!'
+    app/controllers/posts_controller.rb:31:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 20:04:52) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 127ms (View: 114, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-11-02 20:05:02) [GET]
+  Parameters: {"id"=>"view_responses"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=view_responses):
+  app/controllers/posts_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-11-02 20:05:27) [GET]
+  Parameters: {"id"=>"view_responses"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=view_responses):
+  app/controllers/posts_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 20:05:32) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+
+ActionView::TemplateError (undefined method `stringify_keys' for #<Post:0x7f95360>) on line #37 of app/views/posts/index.html.erb:
+34: 			<br />
+35: 			<div class="post_response_link"><%= link_to 'Edit Post', edit_post_path(post) %></div>
+36: 		<% end %>
+37: 		<div class="post_response_link"><%= link_to 'View Responses', {:controller => "posts", :action => "view_responses"}, post %></div>
+38: 		
+39: 		<!--<a href="javascript:hideDiv('div_responses')" >Show Responses</a>
+40: 		<div id="div_responses">
+
+    app/views/posts/index.html.erb:37
+    app/views/posts/index.html.erb:8:in `each'
+    app/views/posts/index.html.erb:8
+    app/controllers/posts_controller.rb:31:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 20:05:49) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+
+ActionView::TemplateError (undefined method `stringify_keys' for #<Post:0x80fca18>) on line #37 of app/views/posts/index.html.erb:
+34: 			<br />
+35: 			<div class="post_response_link"><%= link_to 'Edit Post', edit_post_path(post) %></div>
+36: 		<% end %>
+37: 		<div class="post_response_link"><%= link_to 'View Responses', {:controller => "posts", :action => "view_responses"}, post %></div>
+38: 		
+39: 		<!--<a href="javascript:hideDiv('div_responses')" >Show Responses</a>
+40: 		<div id="div_responses">
+
+    app/views/posts/index.html.erb:37
+    app/views/posts/index.html.erb:8:in `each'
+    app/views/posts/index.html.erb:8
+    app/controllers/posts_controller.rb:31:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 20:05:50) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+
+ActionView::TemplateError (undefined method `stringify_keys' for #<Post:0x8231ad8>) on line #37 of app/views/posts/index.html.erb:
+34: 			<br />
+35: 			<div class="post_response_link"><%= link_to 'Edit Post', edit_post_path(post) %></div>
+36: 		<% end %>
+37: 		<div class="post_response_link"><%= link_to 'View Responses', {:controller => "posts", :action => "view_responses"}, post %></div>
+38: 		
+39: 		<!--<a href="javascript:hideDiv('div_responses')" >Show Responses</a>
+40: 		<div id="div_responses">
+
+    app/views/posts/index.html.erb:37
+    app/views/posts/index.html.erb:8:in `each'
+    app/views/posts/index.html.erb:8
+    app/controllers/posts_controller.rb:31:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 20:06:05) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 129ms (View: 117, DB: 3) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-02 21:23:41) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 122ms (View: 97, DB: 5) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:45:53) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: near ")": syntax error: SELECT * FROM "posts" WHERE (response_id = ) [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near ")": syntax error: SELECT * FROM "posts" WHERE (response_id = ) ):
+  app/controllers/posts_controller.rb:194:in `view_responses'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (23.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#6 (for 127.0.0.1 at 2010-11-03 00:46:34) [GET]
+  Parameters: {"id"=>"view_responses"}
+
+ActionController::UnknownAction (No action responded to 6. Actions: add_cheer, add_response, create, delete_cheer, destroy, edit, get_cheer_for_user_post, get_user, index, logout, new, require_admin, require_login, show, update, view_responses, and view_responses_OLD):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-11-03 00:47:09) [GET]
+  Parameters: {"id"=>"view_responses"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=view_responses):
+  app/controllers/posts_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.7ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:47:15) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: near ")": syntax error: SELECT * FROM "posts" WHERE (response_id = ) [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near ")": syntax error: SELECT * FROM "posts" WHERE (response_id = ) ):
+  app/controllers/posts_controller.rb:194:in `view_responses'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (95.7ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:47:30) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near ")": syntax error: SELECT * FROM "posts" WHERE (response_id = ) [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near ")": syntax error: SELECT * FROM "posts" WHERE (response_id = ) ):
+  app/controllers/posts_controller.rb:194:in `view_responses'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:47:36) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSQLite3::SQLException: near ")": syntax error: SELECT * FROM "posts" WHERE (response_id = ) [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near ")": syntax error: SELECT * FROM "posts" WHERE (response_id = ) ):
+  app/controllers/posts_controller.rb:194:in `view_responses'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:50:55) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = id) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+Completed in 86ms (View: 72, DB: 0) | 200 OK [http://localhost/posts/view_responses/10]
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:50:59) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = id) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+Completed in 18ms (View: 5, DB: 0) | 200 OK [http://localhost/posts/view_responses/2]
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:51:41) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 10) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 73ms (View: 60, DB: 1) | 200 OK [http://localhost/posts/view_responses/2]
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:53:43) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+
+ActionView::TemplateError (undefined local variable or method `show_posts_path' for #<ActionView::Base:0x9419d78>) on line #3 of app/views/posts/view_responses.html.erb:
+1: <h1>Responses to Post</h1> 
+2: 
+3: <div><%= link_to "Back to Posts", show_posts_path %></div>
+4: 
+5: <% @responses.each do |post| %>
+6: 	<% cheer = Cheer.find_by_user_id_and_post_id(@user_id_in_session, post.id)  %>
+
+    app/views/posts/view_responses.html.erb:3
+    app/controllers/posts_controller.rb:217:in `view_responses'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:53:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+
+ActionView::TemplateError (undefined local variable or method `show_post_path' for #<ActionView::Base:0x957bfd0>) on line #3 of app/views/posts/view_responses.html.erb:
+1: <h1>Responses to Post</h1> 
+2: 
+3: <div><%= link_to "Back to Posts", show_post_path %></div>
+4: 
+5: <% @responses.each do |post| %>
+6: 	<% cheer = Cheer.find_by_user_id_and_post_id(@user_id_in_session, post.id)  %>
+
+    app/views/posts/view_responses.html.erb:3
+    app/controllers/posts_controller.rb:217:in `view_responses'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:54:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 10) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 102ms (View: 85, DB: 3) | 200 OK [http://localhost/posts/view_responses/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 00:54:35) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 135ms (View: 118, DB: 5) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:55:02) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 10) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 46ms (View: 36, DB: 1) | 200 OK [http://localhost/posts/view_responses/2]
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:55:14) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 10) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 106ms (View: 94, DB: 1) | 200 OK [http://localhost/posts/view_responses/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 00:55:17) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 117ms (View: 101, DB: 5) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-11-03 00:55:19) [GET]
+  Parameters: {"id"=>"view_responses"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Post with ID=view_responses):
+  app/controllers/posts_controller.rb:40:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (35.2ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 00:56:11) [GET]
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 134ms (View: 117, DB: 7) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:56:18) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 10) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 10) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Completed in 53ms (View: 39, DB: 2) | 200 OK [http://localhost/posts/view_responses/2]
+
+
+Processing PostsController#view_responses (for 127.0.0.1 at 2010-11-03 00:56:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+Rendering template within layouts/application
+Rendering posts/view_responses
+Completed in 17ms (View: 5, DB: 0) | 200 OK [http://localhost/posts/view_responses/3]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 01:18:04) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+
+ActionView::TemplateError (undefined method `mdy' for #<ActionView::Base:0x93c31c8>) on line #26 of app/views/posts/index.html.erb:
+23: 			<% end %>
+24: 		<% end %>
+25: 		
+26: 		<div class="post_user"><%= h("Posted by #{User.find(post.user_id).login} on #{mdy post.created_at} ") %> </div>
+27: 		<div class="post_body"><%= h post.body %></div>		
+28: 		<% if(post.user_id != @user_id_in_session) %>	
+29: 			<br />			
+
+    app/views/posts/index.html.erb:26
+    app/views/posts/index.html.erb:8:in `each'
+    app/views/posts/index.html.erb:8
+    app/controllers/posts_controller.rb:31:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 01:18:33) [GET]
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+
+ActionView::TemplateError (undefined method `mdy' for #<ActionView::Base:0x949d4c0>) on line #26 of app/views/posts/index.html.erb:
+23: 			<% end %>
+24: 		<% end %>
+25: 		
+26: 		<div class="post_user"><%= h("Posted by #{User.find(post.user_id).login} on #{mdy(post.created_at)} ") %> </div>
+27: 		<div class="post_body"><%= h post.body %></div>		
+28: 		<% if(post.user_id != @user_id_in_session) %>	
+29: 			<br />			
+
+    app/views/posts/index.html.erb:26
+    app/views/posts/index.html.erb:8:in `each'
+    app/views/posts/index.html.erb:8
+    app/controllers/posts_controller.rb:31:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 01:20:52) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 83ms (View: 70, DB: 3) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 01:22:07) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 91ms (View: 74, DB: 4) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 01:22:23) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 194ms (View: 170, DB: 7) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 01:22:30) [GET]
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mPost Load (1.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 136ms (View: 118, DB: 6) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-11-03 01:22:35) [GET]
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id IS NULL OR response_id <= 0) [0m
+Rendering template within layouts/application
+Rendering posts/index
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 2) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 2) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 2) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 3) LIMIT 1[0m
+  [4;35;1mCheer Load (1.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 3) [0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 3) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 4) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mPost Load (1.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 4) [0m
+  [4;36;1mCheer Load (1.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 5) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 5) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 5) [0m
+  [4;36;1mCheer Load (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."user_id" = 15 AND "cheers"."post_id" = 6) LIMIT 1[0m
+  [4;35;1mCheer Load (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "cheers" WHERE ("cheers"."post_id" = 6) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE (response_id = 6) [0m
+Completed in 147ms (View: 132, DB: 7) | 200 OK [http://localhost/posts]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2011-03-30 11:28:51) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 5551ms (View: 5549, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#index (for 127.0.0.1 at 2011-03-30 11:29:02) [GET]
+Rendering template within layouts/application
+Rendering login/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing LoginController#login (for 127.0.0.1 at 2011-03-30 11:29:09) [GET]
+Rendering template within layouts/application
+Rendering login/login
+Completed in 39ms (View: 37, DB: 0) | 200 OK [http://localhost/login/login]

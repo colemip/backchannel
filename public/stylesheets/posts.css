@@ -1,0 +1,43 @@
+body {
+	
+}
+
+div.post
+{
+	margin-bottom:20px;
+}
+
+div.post_title
+{
+	font-size:12pt;
+	font-weight:bold;
+	float:left;
+	margin-right:7px;
+}
+
+div.post_body 
+{
+	font-size:10pt;
+}
+
+div.post_user
+{
+	font-style:italic;
+	margin-bottom:10px;
+}
+
+div.post_response_link
+{
+	margin-bottom:5px;
+}
+
+div.post_new_post
+{
+	font-weight:bold;
+	font-size:14pt;
+}
+
+div.post_submit_button
+{
+	margin-bottom: 10px;
+}

@@ -1,0 +1,16 @@
+body {
+	
+}
+
+div.login_flash_notice
+{
+	font-weight:bold;
+	color: #CC0000;
+}
+
+div.logout_button 
+{
+	/*float:right;*/
+	margin-bottom:10px;
+	
+}

@@ -1,0 +1,14 @@
+<h1>Search Results</h1>
+
+
+
+<b>Num Users:</b> <%= h @users.length %><br /><br />
+<% @users.each do |user| %>
+<%= h user.login%> <!--<%= link_to "Show",  user %>-->
+<% end %>
+<br /><br />
+
+<b>Num Posts:</b> <%= h @posts.length %> <br /><br />
+<% @posts.each do |post| %>
+<%= link_to post.title, :controller => "posts",  :action => "#{post.id}/show" %><br /><br />
+<% end %>

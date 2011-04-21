@@ -1,0 +1,23 @@
+<!--<% content_for :head do %>
+	<title>Welcome to MyBackchannel!</title>
+<% end %>-->
+
+Welcome to MyBackchannel!
+<br /><br />
+<% flash[:notice] = "Welcome!" -%> 
+
+<% if !check_user_session then %>
+<%= link_to "Login", :action => "login" -%> | 
+<%= link_to "Create New Account", :action => "create_account" -%>
+<% else %>
+<%= link_to "View Posts", :controller => "posts", :action => "index" %>
+<% end %>	
+
+<!-- Search form -->
+<% form_tag({:controller => "login", :action => "search"}, :method => "get") do  %>
+<p>
+	<label for="search">Search:</label>
+	<%= text_field_tag :search, params[:search] %>
+</p>
+<%= button_to "Search", :action => "search" %>
+<% end %>
