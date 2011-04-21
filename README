@@ -1,0 +1,23 @@
+Ian Coleman
+ipcolema
+
+Testing Framework: Test::Unit
+
+Starting URL: Was this provided? I only used http://localhost:3000. 
+
+To Start the app: 
+
+Within the root of the project directory, run
+ruby script/server
+
+Test data can be imported with
+rake db:seed
+
+
+Unit Tests:
+
+Unit tests can be run w/ the following commands from within the root directory
+
+ruby -I test test/unit/user_test.rb
+ruby -I test test/unit/post_test.rb
+ruby -I test test/unit/cheer_test.rb
